@@ -1,0 +1,4 @@
+[
+  "tdd/tests/test_stringcalculator.py::test_Add_ParamSeul_ReturnMeme",
+  "tdd/tests/test_stringcalculator.py::test_Add_ParamVide_ReturnZero"
+]
