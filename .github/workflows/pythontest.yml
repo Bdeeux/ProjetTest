@@ -1,1 +1,29 @@
+name: Python Test
+
+on:
+  push:
+    branches:
+      - master  # Exécutez le workflow lorsque vous poussez vers la branche 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Utilisez l'image Ubuntu pour exécuter les tests (ou choisissez une autre image selon vos préférences)
+
+    steps:
+    - name: Checkout Repository  # Étape de récupération du repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.11  # Installation de Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Install Dependencies  # Installation des dépendances (comme pytest)
+      run: |
+        pip install pytest
+        # Ajoutez ici toute autre installation de dépendances nécessaire
+
+    - name: Run Tests  # Exécution des tests avec pytest
+      run: pytest
+
 
