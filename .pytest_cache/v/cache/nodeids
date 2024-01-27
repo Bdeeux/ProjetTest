@@ -1,4 +1,9 @@
 [
+  "tdd/tests/test_stringcalculator.py::test_Add_ParamA_ReturnZero",
+  "tdd/tests/test_stringcalculator.py::test_Add_ParamAlphabet_ReturnZero",
+  "tdd/tests/test_stringcalculator.py::test_Add_ParamNegativeNumber_ReturnNegativeNumber",
   "tdd/tests/test_stringcalculator.py::test_Add_ParamSeul_ReturnMeme",
-  "tdd/tests/test_stringcalculator.py::test_Add_ParamVide_ReturnZero"
+  "tdd/tests/test_stringcalculator.py::test_Add_ParamVide_ReturnZero",
+  "tdd/tests/test_stringcalculator.py::test_Multiply",
+  "tdd/tests/test_stringcalculator.py::test_divide_empty_string"
 ]
