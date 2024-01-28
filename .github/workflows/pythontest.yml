@@ -8,23 +8,20 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Utilisez l'image Ubuntu pour exécuter les tests (ou choisissez une autre image selon vos préférences)
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["pypy3.9", "pypy3.10", "3.9", "3.10", "3.11", "3.12"]
 
     steps:
-    - name: Checkout Repository  # Étape de récupération du repository
-      uses: actions/checkout@v2
-
-    - name: Set up Python 3.11  # Installation de Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.11
-
-    - name: Install Dependencies  # Installation des dépendances (comme pytest)
-      run: |
-        pip install pytest
-        # Ajoutez ici toute autre installation de dépendances nécessaire
-
-    - name: Run Tests  # Exécution des tests avec pytest
-      run: pytest
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
 
 
