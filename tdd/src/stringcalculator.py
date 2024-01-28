@@ -306,7 +306,7 @@ class StringCalculator:
         return product
 
 #Red (La test avec des nombres décimaux ne passe pas)
-    def Multiply(numbers, delimiters=None):
+    #def Multiply(numbers, delimiters=None):
         if not numbers:
             return 1
 
@@ -339,7 +339,7 @@ class StringCalculator:
     
 
 #Green (Le test passe)
-    #def Multiply(numbers, delimiters=None):
+    def Multiply(numbers, delimiters=None):
         if delimiters is None:
             delimiters = [';']  # Utilisez le point-virgule comme délimiteur par défaut
 
