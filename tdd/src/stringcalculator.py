@@ -169,6 +169,7 @@ class StringCalculator:
 
         return -1 if None in (parse_and_filter_number(part) for part in parts) else product
     
+    
 #Green (Le test passe nous avons adapté la fonction)
     #def Multiply(numbers):
         def parse_and_filter_number(num_str):

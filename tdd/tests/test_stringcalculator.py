@@ -20,6 +20,7 @@ def test_Add_ParamSeul_ReturnMeme():
     somme = StringCalculator.Add(mon_param)
     # assert
     assert somme == mon_resultat
+    
 
 ## PARTIE 1 ##
 
