@@ -9,24 +9,28 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         python-version: ["pypy3.9", "pypy3.10", "3.9", "3.10", "3.11", "3.12"]
-    
+
     steps:
       - name: Checkout du code
         uses: actions/checkout@v4
-      
+
       - name: Configuration de Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-      
+
+      - name: Définir PYTHONPATH
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
       - name: Installation des dépendances
         run: |
           python -m pip install --upgrade pip
-      
+          pip install pytest pytest-cov
+
       - name: Test avec pytest
         run: |
-          pip install pytest pytest-cov
           pytest tdd/tests/test_stringcalculator.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
