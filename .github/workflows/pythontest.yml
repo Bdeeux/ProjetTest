@@ -2,9 +2,9 @@ name: Python Test
 
 on:
   push:
-    branches: [ "Exo1" ]
+    branches: [ "Exo2" ]
   pull_request:
-    branches: [ "Exo1" ]
+    branches: [ "Exo2" ]
 
 jobs:
   build:
