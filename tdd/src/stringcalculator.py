@@ -53,7 +53,7 @@ class StringCalculator:
 
         return product
     
-# Deuxième itération # 
+# Deuxième itération (On essaye de multiplier des nombres négatifs) # 
 
 #Red
     #def Multiply(numbers):
@@ -88,7 +88,7 @@ class StringCalculator:
         return product
     
 #Blue 
-    def Multiply(numbers):
+    #def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
@@ -102,10 +102,10 @@ class StringCalculator:
 
         return product
     
-    # Troisième itération #
+    # Troisième itération (On essaye de multiplier des lettres) #
 
 #Red
-    #def Multiply(numbers):
+    def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
@@ -113,7 +113,6 @@ class StringCalculator:
             except ValueError:
                 return 1
 
-        # On utilise reduce pour éviter la boucle for
         parts = numbers.split(';')
         product = reduce(lambda x, y: x * parse_and_filter_number(y), parts, 1)
 

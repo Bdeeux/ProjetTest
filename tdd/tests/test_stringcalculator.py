@@ -34,7 +34,7 @@ def test_Multiply_negative_numbers():
     assert StringCalculator.Multiply("-2;3") == -6
 
 # Troisième test (On essaye de multiplier des lettres)
-#def test_Multiply_InvalidInput():
-#    assert StringCalculator.Multiply("2;3;abc;4") == -1
+def test_Multiply_InvalidInput():
+    assert StringCalculator.Multiply("2;3;abc;4") == -1
 
 
