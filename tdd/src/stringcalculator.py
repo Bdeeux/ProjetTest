@@ -14,6 +14,20 @@ class StringCalculator:
         return sum
     
     # Rouge
-    def Multiply(numbers):
+    #def Multiply(numbers):
         # Implémentation temporaire
         return 0
+
+ 
+    # vert
+    def Multiply(numbers):
+        parts = numbers.split(';')
+        product = 1
+        for part in parts:
+            try:
+                number = int(part)
+            except ValueError:
+                continue  # Ignore les valeurs non numériques
+            if 0 < number <= 1000:
+                product *= number
+        return product
