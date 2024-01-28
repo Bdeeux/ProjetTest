@@ -20,7 +20,7 @@ class StringCalculator:
 
  
     # vert
-    def Multiply(numbers):
+    #def Multiply(numbers):
         parts = numbers.split(';')
         product = 1
         for part in parts:
@@ -30,4 +30,20 @@ class StringCalculator:
                 continue  # Ignore les valeurs non numériques
             if 0 < number <= 1000:
                 product *= number
+        return product
+    
+    # bleu
+    def Multiply(numbers):
+        def parse_and_filter_number(num_str):
+            try:
+                number = int(num_str)
+                return number if 0 < number <= 1000 else 1
+            except ValueError:
+                return 1
+
+        parts = numbers.split(';')
+        product = 1
+        for part in parts:
+            product *= parse_and_filter_number(part)
+
         return product
