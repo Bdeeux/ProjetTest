@@ -243,7 +243,7 @@ class StringCalculator:
         return product
 
 #Green (Le test de la mise en place de plusieurs délimiteurs passe)
-    def Multiply(numbers, delimiters=None):
+    #def Multiply(numbers, delimiters=None):
         if delimiters is None:
             delimiters = [';']  # Utilisez le point-virgule comme délimiteur par défaut
 
@@ -274,7 +274,7 @@ class StringCalculator:
         return product
 
 #Blue (Meilleur lisibilité du code)
-    #def Multiply(numbers, delimiters=None):
+    def Multiply(numbers, delimiters=None):
         if not numbers:
             return 1  # Retourne 1 si la chaîne de nombres est vide
 

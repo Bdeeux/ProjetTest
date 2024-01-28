@@ -5,6 +5,5 @@
   "Lib/site-packages/colorama/tests/isatty_test.py": true,
   "Lib/site-packages/colorama/tests/winterm_test.py": true,
   "tdd/tests/test_stringcalculator.py::test_Add_ParamA_ReturnZero": true,
-  "tdd/tests/test_stringcalculator.py::test_Multiply_SpacesBetweenNumbers": true,
-  "tdd/tests/test_stringcalculator.py::test_Multiply_DifferentSeparator": true
+  "tdd/tests/test_stringcalculator.py::test_Multiply_SpacesBetweenNumbers": true
 }
