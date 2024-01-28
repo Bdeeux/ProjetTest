@@ -20,7 +20,7 @@ def test_Add_ParamSeul_ReturnMeme():
     somme = StringCalculator.Add(mon_param)
     # assert
     assert somme == mon_resultat
-    
+
 
 ## PARTIE 1 ##
 
@@ -46,8 +46,8 @@ def test_Mutiply_Empty():
     assert StringCalculator.Multiply("") == 1
 
 # Deuxième test structurelle (On test avec un délimitateur différent du ";")
-#def test_Multiply_DifferentSeparator():
-    #assert StringCalculator.Multiply("2,3,4", ",") == 24
+def test_Multiply_DifferentSeparator():
+    assert StringCalculator.Multiply("2,3,4", ",") == 24
 
 # Troisième test structurelle (On test avec des nombres à virgules)
 #def test_Multiply_DecimalNumbers():
