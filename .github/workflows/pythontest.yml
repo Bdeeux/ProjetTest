@@ -2,28 +2,35 @@ name: Python Test
 
 on:
   push:
-    branches:
-      - master  # Exécutez le workflow lorsque vous poussez vers la branche 'master'
+    branches: [ "Exo1" ]
+  pull_request:
+    branches: [ "Exo1" ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Utilisez l'image Ubuntu pour exécuter les tests (ou choisissez une autre image selon vos préférences)
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["pypy3.9", "pypy3.10", "3.9", "3.10", "3.11", "3.12"]
 
     steps:
-    - name: Checkout Repository  # Étape de récupération du repository
-      uses: actions/checkout@v2
+      - name: Checkout du code
+        uses: actions/checkout@v4
 
-    - name: Set up Python 3.11  # Installation de Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.11
+      - name: Configuration de Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Install Dependencies  # Installation des dépendances (comme pytest)
-      run: |
-        pip install pytest
-        # Ajoutez ici toute autre installation de dépendances nécessaire
+      - name: Définir PYTHONPATH
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
 
-    - name: Run Tests  # Exécution des tests avec pytest
-      run: pytest
+      - name: Installation des dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-cov
 
-
+      - name: Test avec pytest
+        run: |
+          pytest tdd/tests/test_stringcalculator.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
