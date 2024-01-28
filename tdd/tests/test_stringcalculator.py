@@ -50,7 +50,7 @@ def test_Multiply_DifferentSeparator():
     assert StringCalculator.Multiply("2,3,4", ",") == 24
 
 # Troisième test structurelle (On test avec des nombres à virgules)
-#def test_Multiply_DecimalNumbers():
-    #assert StringCalculator.Multiply("2.5;3.5") == 8.75
+def test_Multiply_DecimalNumbers():
+    assert StringCalculator.Multiply("2.5;3.5") == 8.75
 
 
