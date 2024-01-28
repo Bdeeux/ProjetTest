@@ -156,7 +156,7 @@ class StringCalculator:
     # Premier test structurelle (On test si le paramètre est vide) #
 
 #Red (Le test ne passe pas car le paramètre vide n'est pas géré)
-    def Multiply(numbers):
+    #def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
@@ -171,7 +171,7 @@ class StringCalculator:
     
     
 #Green (Le test passe nous avons adapté la fonction)
-    #def Multiply(numbers):
+    def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
