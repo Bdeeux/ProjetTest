@@ -72,7 +72,7 @@ class StringCalculator:
         return product
     
 #Green
-    def Multiply(numbers):
+    #def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
@@ -88,7 +88,7 @@ class StringCalculator:
         return product
     
 #Blue 
-    #def Multiply(numbers):
+    def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
