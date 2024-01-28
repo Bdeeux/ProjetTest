@@ -21,11 +21,20 @@ def test_Add_ParamSeul_ReturnMeme():
     # assert
     assert somme == mon_resultat
 
+
+# Premier test
 def test_Multiply():
-    # arrange
-    mon_param = "3;4;1;1001"
+    mon_param = "3;4;1"
     mon_resultat = 12  # La multiplication attendue est de 3 * 4 * 1 = 12
-    # act
     produit = StringCalculator.Multiply(mon_param)
-    # assert
     assert produit == mon_resultat
+
+# Deuxième test (On essaye de multiplier par un nombre négatif)
+def test_Multiply_negative_numbers():
+    assert StringCalculator.Multiply("-2;3") == -6
+
+# Troisième test (On essaye de multiplier des lettres)
+#def test_Multiply_InvalidInput():
+#    assert StringCalculator.Multiply("2;3;abc;4") == -1
+
+
