@@ -21,6 +21,7 @@ def test_Add_ParamSeul_ReturnMeme():
     # assert
     assert somme == mon_resultat
 
+## PARTIE 1 ##
 
 # Premier test
 def test_Multiply():
@@ -36,5 +37,19 @@ def test_Multiply_negative_numbers():
 # Troisième test (On essaye de multiplier des lettres)
 def test_Multiply_InvalidInput():
     assert StringCalculator.Multiply("2;3;abc;4") == -1
+
+## PARTIE 2 ##
+
+# Premier test structurelle (On test avec une entrée vide)
+def test_Mutiply_Empty():
+    assert StringCalculator.Multiply("") == 1
+
+# Deuxième test structurelle (On test avec un délimitateur différent du ";")
+#def test_Multiply_DifferentSeparator():
+    #assert StringCalculator.Multiply("2,3,4", ",") == 24
+
+# Troisième test structurelle (On test avec des nombres à virgules)
+#def test_Multiply_DecimalNumbers():
+    #assert StringCalculator.Multiply("2.5;3.5") == 8.75
 
 
