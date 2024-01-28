@@ -217,7 +217,7 @@ class StringCalculator:
 
 # Deuxième test structurelle (On test si le délimiteur est une virgule) #
 #Red (Test de plusieur délimitateur)
-    def Multiply(numbers):
+    #def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
@@ -243,7 +243,7 @@ class StringCalculator:
         return product
 
 #Green (Le test de la mise en place de plusieurs délimiteurs passe)
-    #def Multiply(numbers, delimiters=None):
+    def Multiply(numbers, delimiters=None):
         if delimiters is None:
             delimiters = [';']  # Utilisez le point-virgule comme délimiteur par défaut
 
