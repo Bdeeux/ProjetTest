@@ -2,8 +2,9 @@ name: Python Test
 
 on:
   push:
-    branches:
-      - master  # Exécutez le workflow lorsque vous poussez vers la branche 'master'
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
