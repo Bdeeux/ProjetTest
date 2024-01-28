@@ -171,7 +171,7 @@ class StringCalculator:
     
     
 #Green (Le test passe nous avons adapté la fonction)
-    def Multiply(numbers):
+    #def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
@@ -189,7 +189,7 @@ class StringCalculator:
         return -1 if None in (parse_and_filter_number(part) for part in parts) else product
     
 #Blue (On utilise une liste pour que le code soit plus lisible)
-    #def Multiply(numbers):
+    def Multiply(numbers):
         def parse_and_filter_number(num_str):
             try:
                 number = int(num_str)
